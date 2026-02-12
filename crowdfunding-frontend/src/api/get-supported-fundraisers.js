@@ -25,7 +25,6 @@ async function getSupportedFundraisers() {
 
     const allFundraisers = await response.json();
 
-    // Filter fundraisers where the user is a supporter
     const userIdNum = parseInt(userId);
     const supportedFundraisers = allFundraisers.filter(fundraiser =>
         fundraiser.supporters.includes(userIdNum)

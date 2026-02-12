@@ -204,7 +204,7 @@ function FundraiserPage() {
                                 </div>
                             ) : (
                                 <div className="empty-state">
-                                    <p>No pledges yet. Be the first to show your support!</p>
+                                    <p>Something meaningful is taking shape!</p>
                                 </div>
                             )}
                         </section>

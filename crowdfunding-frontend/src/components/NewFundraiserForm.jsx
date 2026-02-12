@@ -40,19 +40,19 @@ function NewFundraiserForm() {
         event.preventDefault();
         setError("");
 
-        // Check if user is authenticated
+
         if (!auth.token) {
             setError("You must be logged in to create a fundraiser. Please login or create an account first.");
             return;
         }
 
-        // Validate required fields
+
         if (!credentials.title.trim() || !credentials.description.trim() || !credentials.goal_text.trim()) {
             setError("All fields are required");
             return;
         }
 
-        // Only send the basic fields to the backend
+
         const fundraiserData = {
             title: credentials.title,
             description: credentials.description,

@@ -30,7 +30,7 @@ function HomePage() {
                 </div>
             </section>
 
-            {/* ===== ABOUT / WHAT IS THIS FUNDRAISER ===== */}
+
             <section className="about" id="how-it-works">
                 <h2>What is this fundraiser about?</h2>
 
@@ -44,7 +44,7 @@ function HomePage() {
                 </p>
             </section>
 
-            {/* ===== CALL TO ACTION ===== */}
+
             <section className="cta">
                 <h2>Start your fundraiser today</h2>
                 <p>
@@ -55,7 +55,7 @@ function HomePage() {
                 <button onClick={() => window.location.href = '/new-fundraiser'}>Bring your community together</button>
             </section>
 
-            {/* ===== TESTIMONIALS ===== */}
+
             <section className="testimonials">
                 <h2>Stories from our community</h2>
 
@@ -86,7 +86,7 @@ function HomePage() {
                 </div>
             </section>
 
-            {/* ===== FOOTER ===== */}
+
             <footer className="footer">
                 <div className="footer-content">
                     <p>© 2026 Twogether. All rights reserved.</p>

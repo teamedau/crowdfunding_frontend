@@ -8,10 +8,6 @@ async function postFundraiser({ title, description, goal_text, image }) {
         goal_text: goal_text,
     };
 
-    // Add image if provided
-    if (image) {
-        body.image = image;
-    }
 
     const response = await fetch(url, {
         method: "POST",

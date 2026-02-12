@@ -21,7 +21,7 @@ function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
-  // Edit state
+// Edit state
     const [editingId, setEditingId] = useState(null);
     const [editForm, setEditForm] = useState({
         title: "",
@@ -29,7 +29,7 @@ function Dashboard() {
         goal_text: "",
     });
 
-  // Invite state
+// Invite state
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [selectedFundraiser, setSelectedFundraiser] = useState(null);
@@ -56,7 +56,7 @@ function Dashboard() {
                 getMyInvitations(),
             ]);
 
-            // Combine owned and supported fundraisers, avoid duplicates
+
             const allFundraisers = [...ownedFundraisersData];
             supportedFundraisersData.forEach(supported => {
                 if (!allFundraisers.find(f => f.id === supported.id)) {
@@ -74,7 +74,7 @@ function Dashboard() {
         }
     };
 
-    /* ==FUNDRAISER ACTIONS== */
+// fundraiser actions
 
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure you want to delete this fundraiser?"))
@@ -120,7 +120,7 @@ function Dashboard() {
         }
     };
 
-/* ===INVITATION ACTIONS=== */
+//invitations
 
     const handleInvitationResponse = async (id, action) => {
         try {

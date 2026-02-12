@@ -32,7 +32,7 @@ const PledgeModal = ({ isOpen, onClose, onSubmit, error }) => {
             comment,
         });
 
-        // Reset form after submission
+// Delete info from the form  after submission
         setPledgeType("time");
         setHours("");
         setAction("");

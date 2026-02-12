@@ -28,14 +28,14 @@ function NewUserForm() {
         event.preventDefault();
         setError("");
 
-        // Validate email format
+// Validates users email - Regex 101
         const emailRegex = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
         if (!emailRegex.test(credentials.email)) {
             setError("Please enter a valid email address");
             return;
         }
 
-        // Validate password length
+
         if (credentials.password.length < 6) {
             setError("Password must be at least 6 characters long");
             return;
