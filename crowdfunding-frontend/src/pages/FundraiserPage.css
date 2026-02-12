@@ -1,0 +1,507 @@
+.fundraiser-page {
+    min-height: 100vh;
+    background-color: #f8faf9;
+}
+
+.fundraiser-loading,
+.fundraiser-error {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+}
+
+.fundraiser-error {
+    color: #e57373;
+}
+
+.fundraiser-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.fundraiser-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #557170 0%, #81c087 100%);
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.fundraiser-hero-content {
+    position: relative;
+    width: 100%;
+    padding: 3rem 2rem 2rem;
+    color: white;
+}
+
+.fundraiser-hero-content h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.fundraiser-goal {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.fundraiser-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.fundraiser-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fundraiser-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fundraiser-section h2 {
+    margin: 0 0 1.5rem 0;
+    color: #557170;
+    font-size: 1.8rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.fundraiser-description {
+    color: #6b6b6b;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 40px;
+    background: #e8eeec;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #557170, #81c087);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.progress-info {
+    color: #9e9e9e;
+    margin: 0;
+}
+
+/* Info Boxes */
+.info-box {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+}
+
+.info-box--warning {
+    background: #fff9e6;
+    border-color: #ffb74d;
+    color: #856404;
+}
+
+/* Pledges */
+.pledges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pledge-card {
+    background: #f8faf9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #81c087;
+}
+
+.pledge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pledge-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pledge-type--time {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.pledge-type--words {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.pledge-date {
+    font-size: 0.85rem;
+    color: #9e9e9e;
+}
+
+.pledge-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pledge-value {
+    margin: 0;
+    color: #2c2c2c;
+    font-size: 1.05rem;
+}
+
+.pledge-comment {
+    margin: 0;
+    color: #6b6b6b;
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 2px solid #e8eeec;
+}
+
+/* Sidebar */
+.fundraiser-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-card h3 {
+    margin: 0 0 1.5rem 0;
+    color: #557170;
+    font-size: 1.3rem;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e8eeec;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #9e9e9e;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-open {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-closed {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Pledge Modal */
+.pledge-modal {
+    max-width: 500px;
+}
+
+.pledge-form {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.required {
+    color: #e57373;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e8eeec;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #557170;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #9e9e9e;
+    font-size: 0.85rem;
+}
+
+.pledge-type-selector {
+    display: flex;
+    gap: 1rem;
+}
+
+.type-button {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    border: 2px solid #e8eeec;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-button:hover {
+    border-color: #557170;
+}
+
+.type-button.active {
+    background: #557170;
+    color: white;
+    border-color: #557170;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #e57373;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #e57373;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #9e9e9e;
+}
+
+/* Modal Overlay (reutilizado del Dashboard) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e8eeec;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #557170;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #9e9e9e;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #2c2c2c;
+}
+
+/* Buttons (reutilizados) */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn--primary {
+    background: #557170;
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #3f5554;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(85, 113, 112, 0.3);
+}
+
+.btn--outline {
+    background: white;
+    border: 2px solid #557170;
+    color: #557170;
+}
+
+.btn--outline:hover {
+    background: #557170;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .fundraiser-content {
+        grid-template-columns: 1fr;
+    }
+
+    .fundraiser-sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .fundraiser-hero {
+        height: 300px;
+    }
+
+    .fundraiser-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .fundraiser-goal {
+        font-size: 1rem;
+    }
+
+    .fundraiser-content {
+        padding: 1rem;
+    }
+
+    .fundraiser-section {
+        padding: 1.5rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .section-header .btn {
+        width: 100%;
+    }
+
+    .pledge-type-selector {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}

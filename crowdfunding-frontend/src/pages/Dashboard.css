@@ -1,0 +1,364 @@
+/* ===BASE DASHBOARD LAYOUT=== */
+
+.dashboard {
+    min-height: 100vh;
+    background-color: #f8faf9;
+    padding: 2rem 0;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard-loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.2rem;
+    color: #9e9e9e;
+}
+
+/* ===HEADER=== */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e8eeec;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2.3rem;
+    color: #557170;
+    margin: 0;
+}
+
+/* ===SECTIONS=== */
+
+.dashboard-section {
+    margin-bottom: 3rem;
+}
+
+.dashboard-section h2 {
+    font-size: 1.8rem;
+    color: #3f5554;
+    margin-bottom: 1.5rem;
+}
+
+/* ===ERROR=== */
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* ===EMPTY STATE=== */
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    color: #6b6b6b;
+    margin-bottom: 1.5rem;
+}
+
+/* ===FUNDRAISER GRID=== */
+
+.fundraisers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* ===FUNDRAISER CARD=== */
+
+.fundraiser-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+}
+
+.fundraiser-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.fundraiser-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* ===FUNDRAISER CONTENT=== */
+
+.fundraiser-content h3,
+.fundraiser-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+    color: #557170;
+}
+
+.description,
+.fundraiser-description {
+    color: #6b6b6b;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* ===STATUS=== */
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status.open {
+    background-color: #81c087;
+    color: white;
+}
+
+.status.closed {
+    background-color: #e57373;
+    color: white;
+}
+
+/* ===PROGRESS=== */
+
+.progress-section {
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #81c087;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===STATS=== */
+
+.fundraiser-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8faf9;
+    border-radius: 8px;
+}
+
+.fundraiser-stats span {
+    font-size: 0.9rem;
+    color: #2c2c2c;
+}
+
+/* ===ACTION BUTTON=== */
+
+.card-actions,
+.fundraiser-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ===BUTTON SYSTEM=== */
+
+.btn,
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Primary new */
+.btn--primary {
+    background: #557170;
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #3f5554;
+}
+
+/* Old primary compatible */
+.btn-primary {
+    background-color: #81c087;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6fb076;
+}
+
+.btn--outline {
+    background: white;
+    border: 2px solid #557170;
+    color: #557170;
+}
+
+.btn--success {
+    background: #81c087;
+    color: white;
+}
+
+.btn--danger {
+    background: #e57373;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #157c96;
+    color: white;
+}
+
+.btn-view {
+    background-color: #8833ce;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e04414;
+    color: white;
+}
+
+.btn-small,
+.btn--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* ===INVITATIONS=== */
+
+.invitations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.invitation-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #557170;
+}
+
+.invitation-date {
+    font-size: 0.85rem;
+    color: #9e9e9e;
+}
+
+/* ===MODAL=== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e8eeec;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* ===SEARCH=== */
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e8eeec;
+    border-radius: 8px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #557170;
+}
+
+/* ===RESPONSIVE=== */
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fundraisers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-actions,
+    .fundraiser-actions {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        max-height: 100vh;
+    }
+}

@@ -1,6 +1,200 @@
-#fundraiser-list {
+
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* ===== HERO ===== */
+.hero {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #f5f7f6;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1f3d3a;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-actions button {
+    background-color: #3f5554;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero-actions button:hover {
+    opacity: 0.9;
+}
+
+.hero-actions a {
+    color: #3f5554;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-actions a:hover {
+    text-decoration: underline;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 4rem 6rem;
+    max-width: 900px;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #1f3d3a;
+}
+
+.about p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background-color: #88bb8b;
+    color: white;
+    padding: 4rem 6rem;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+}
+
+.cta button {
+    background-color: white;
+    color: #3f5554;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    opacity: 0.9;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+    padding: 4rem 6rem;
+    background-color: #f9faf9;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #1f3d3a;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #1f3d3a;
+    color: white;
+    padding: 2rem 6rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .about,
+    .cta,
+    .testimonials {
+        padding: 3rem 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
 }
