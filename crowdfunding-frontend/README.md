@@ -1,16 +1,88 @@
-# React + Vite
+<img src="logo.png" alt="Together Logo" style="width:120px; border-radius:12px;">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Together is a modern community-driven fundraiser platform where people support each other through meaningful actions.
 
-Currently, two official plugins are available:
+Instead of just donating money, users contribute through intentional participation, engagement, and shared goals; building stronger communities around purpose.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Together allows users to:
 
-## Expanding the ESLint configuration
+- Create fundraisers in seconds  
+- Invite friends and family to join  
+- Support each other through meaningful actions  
+- Track progress and community engagement  
+- Experience the power of collective support  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project was built as a dynamic, app-like experience focused on simplicity, clarity, and emotional connection.
+
+---
+
+## 🛠 Tech Stack
+
+Frontend:
+- React
+- CSS (responsive design)
+
+Backend:
+- Django
+- Django REST Framework
+- Token Authentication
+
+Database:
+- SQLite (development)
+
+---
+
+## Project Requirements
+
+- [:white_check_mark:] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React. 
+- [:white_check_mark:] Have a cool name: it's name is Twogther
+- [:white_check_mark:] Have a clear target audience: It's for communities, people feeling lonely, a platform for the AreUOk movement
+- [:white_check_mark:] Have user accounts. A user should have at least the following attributes:
+  - [:white_check_mark:] Username
+  - [:white_check_mark:] Email address
+  - [:white_check_mark:] Password
+- [:white_check_mark:] Ability to create a “fundraiser” to be crowdfunded which will include at least the following attributes:
+  - [:white_check_mark:] Title
+  - [:white_check_mark:] Owner (a user)
+  - [:white_check_mark:] Description
+  - [:x:] Image: I started the development but it will stay to a next stage. People collect characters everytime they make a pledge. Some part is ready specially in styles. But it needs a bit more work
+  - [:white_check_mark:] Target amount to raise
+  - [:white_check_mark:] Whether it is currently open to accepting new supporters or not
+  - [:white_check_mark:] When the fundraiser was created
+- [:white_check_mark:] Ability to “pledge” to a fundraiser. A pledge should include at least the following attributes:
+  - [:white_check_mark:] An amount
+  - [:white_check_mark:] The fundraiser the pledge is for
+  - [:white_check_mark:] The supporter/user (i.e. who created the pledge)
+  - [:x:] Whether the pledge is anonymous or not: This is not possible, because to make a pledge you need to be invited by the fundraiser owner. The idea is to highlight who does the pledge not hide
+  - [:white_check_mark:] A comment to go along with the pledge
+- [:white_check_mark:] Implement suitable update/delete functionality, e.g. should a fundraiser owner be allowed to update its description?
+- [:white_check_mark:] Implement suitable permissions, e.g. who is allowed to delete a pledge?
+- [:white_check_mark:] Return the relevant status codes for both successful and unsuccessful requests to the API.
+- [:x:] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page): I didn't have time to do this before submission
+- [:white_check_mark:] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
+- [:white_check_mark:] Implement responsive design.
+
+## Print Screens
+
+###Home
+<img src="./assets/ReadMe/screen1.png" alt="Home" width="800">
+
+###About
+<img src="./assets/ReadMe/screen2.png" alt="About" width="800">
+
+###Create a new fundraiser form
+<img src="./assets/ReadMe/screen3.png" alt="New Fundraiser" width="800">
+
+###Login form
+<img src="./assets/ReadMe/screen4.png" alt="Login Form" width="800">
+
+###Fundraisers & invitations
+<img src="./assets/ReadMe/screen5.png" alt="Fundraiser Lists" width="800">
+<img src="./assets/ReadMe/screen7.png" alt="Invitations" width="800">
+
+###Dashboard
+<img src="./assets/ReadMe/screen6.png" alt="Dashboard" width="800">

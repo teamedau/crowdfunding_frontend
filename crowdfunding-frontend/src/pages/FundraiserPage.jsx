@@ -17,6 +17,7 @@ function FundraiserPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [showPledgeModal, setShowPledgeModal] = useState(false);
+    const [completedTasks, setCompletedTasks] = useState([]);
 
 // Pledge form state
     const [pledgeError, setPledgeError] = useState("");
@@ -45,6 +46,16 @@ function FundraiserPage() {
         if (!supporterId) return 'Unknown Supporter';
         const user = users.find(u => u.id === supporterId);
         return user ? `${user.first_name} ${user.last_name}` : `User #${supporterId}`;
+    };
+
+    const handleTaskToggle = (taskIndex) => {
+        setCompletedTasks(prev => {
+            if (prev.includes(taskIndex)) {
+                return prev.filter(index => index !== taskIndex);
+            } else {
+                return [...prev, taskIndex];
+            }
+        });
     };
 
     const isSupporter = () => {
@@ -145,7 +156,11 @@ function FundraiserPage() {
                                 <div className="checklist-container">
                                     {fundraiser.checklist.map((task, index) => (
                                         <div key={index} className="checklist-item">
-                                            <input type="checkbox" disabled />
+                                            <input 
+                                                type="checkbox" 
+                                                checked={completedTasks.includes(index)}
+                                                onChange={() => handleTaskToggle(index)}
+                                            />
                                             <span className="checklist-task">{task}</span>
                                         </div>
                                     ))}
