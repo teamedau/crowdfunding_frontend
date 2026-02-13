@@ -8,6 +8,7 @@ import LayoutTemplate from "./components/LayoutTemplate.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import NewFundraiserFormPage from "./pages/NewFundraiserFormPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     element: <LayoutTemplate />,
     children: [
       {path: "/", element: <HomePage /> },
+      {path: "/about", element: <AboutPage /> },
       {path: "/login", element: <LoginPage /> },
       {path: "/fundraiser/:id", element: <FundraiserPage /> },
       {path: "/register", element: <RegisterPage /> },

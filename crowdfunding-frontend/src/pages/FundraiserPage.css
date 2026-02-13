@@ -40,6 +40,7 @@
 .fundraiser-hero-content h1 {
     margin: 0 0 0.5rem 0;
     font-size: 2.5rem;
+    color: white;
 }
 
 .fundraiser-goal {
@@ -99,7 +100,7 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 }
 
 .progress-fill {
@@ -115,7 +116,7 @@
 .progress-text {
     color: white;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .progress-info {
@@ -135,6 +136,53 @@
     background: #fff9e6;
     border-color: #ffb74d;
     color: #856404;
+}
+
+/* Checklist */
+.checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f8faf9;
+    border-radius: 8px;
+    border-left: 4px solid #81c087;
+    transition: all 0.3s ease;
+}
+
+.checklist-item:hover {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #81c087;
+    flex-shrink: 0;
+}
+
+.checklist-task {
+    font-size: 1rem;
+    color: #2c2c2c;
+    line-height: 1.4;
+}
+
+.checklist-info {
+    color: #9e9e9e;
+    font-size: 0.95rem;
+    margin: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e8eeec;
+    padding-top: 1rem;
 }
 
 /* Pledges */

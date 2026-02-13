@@ -1,4 +1,4 @@
-async function postFundraiser({ title, description, goal_text, image }) {
+async function postFundraiser({ title, description, goal_text, image, checklist }) {
     const url = `${import.meta.env.VITE_API_BASE_URL}/fundraisers/`;
     const token = window.localStorage.getItem("token");
 
@@ -8,6 +8,10 @@ async function postFundraiser({ title, description, goal_text, image }) {
         goal_text: goal_text,
     };
 
+    // Add checklist if provided
+    if (checklist && checklist.length > 0) {
+        body.checklist = checklist;
+    }
 
     const response = await fetch(url, {
         method: "POST",

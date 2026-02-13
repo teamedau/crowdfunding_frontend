@@ -97,12 +97,6 @@ function LoginForm() {
                     /> Remember me
                 </label>
 
-                <div className="forgot-password">
-                    <Link to="/forgot-password">
-                        Forgot password?
-                    </Link>
-                </div>
-
                 <p style={{textAlign: 'center', marginTop: '1rem'}}>
                     Don't have an account? <Link to="/register">Create one</Link>
                 </p>

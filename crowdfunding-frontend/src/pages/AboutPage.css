@@ -1,0 +1,388 @@
+.about-page {
+    min-height: 100vh;
+}
+
+h2 {
+    color: var(--primary);
+}
+
+
+.about-hero {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-12) 0 var(--space-10);
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.hero-subtitle {
+    font-size: var(--text-xl);
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.mission-section {
+    padding: var(--space-10) 0;
+    background: white;
+}
+
+.mission-card {
+    background: var(--bg);
+    border: 3px solid var(--secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 0 6px rgba(129, 192, 135, 0.1), var(--shadow-lg);
+}
+
+.mission-card h2 {
+    margin-bottom: var(--space-6);
+    color: var(--text-light);
+}
+
+.mission-card p {
+    margin-bottom: var(--space-4);
+    line-height: 1.8;
+}
+
+.mission-card p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-card strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/*how it works section*/
+.how-works-detailed {
+    padding: var(--space-10) 0;
+    background: linear-gradient(180deg, white 0%, #f8faf9 100%);
+}
+
+.process-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Timeline line */
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 90px;
+    padding-bottom: var(--space-10);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    z-index: 1;
+}
+
+.timeline-content {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-content h3 {
+    font-size: var(--text-xl);
+    color: var(--primary);
+    margin-bottom: var(--space-4);
+}
+
+.timeline-content p {
+    color: var(--text-light);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Example box */
+.example-box {
+    background: var(--accent);
+    border-left: 4px solid var(--accent-dark);
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-4);
+}
+
+.example-box strong {
+    color: var(--primary);
+}
+
+/* Benefit list */
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0 0 0;
+}
+
+.benefit-list li {
+    padding: var(--space-2) 0;
+    color: var(--text-dark);
+}
+
+/* Pledge types */
+.pledge-types {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+.pledge-type-card {
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+.pledge-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-2);
+}
+
+.pledge-type-card h4 {
+    font-size: var(--text-lg);
+    color: var(--primary);
+    margin-bottom: var(--space-2);
+}
+
+.pledge-type-card p {
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+/* Character showcase */
+.character-showcase {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    margin-top: var(--space-5);
+    padding: var(--space-5);
+    background: var(--bg);
+    border-radius: var(--radius-md);
+}
+
+.character-preview {
+    text-align: center;
+}
+
+.character-item {
+    font-size: 3rem;
+    margin-bottom: var(--space-2);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.character-preview:nth-child(2) .character-item {
+    animation-delay: 0.3s;
+}
+
+.character-preview:nth-child(3) .character-item {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .process-timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 70px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+
+    .character-showcase {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
+
+/*why section*/
+.why-twogether {
+    padding: var(--space-10) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    background: white;
+}
+
+.differences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.difference-card {
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.difference-card:hover {
+    background: white;
+    border-color: var(--secondary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.diff-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-3);
+}
+
+.difference-card h3 {
+    font-size: var(--text-xl);
+    color: var(--primary);
+    margin-bottom: var(--space-3);
+}
+
+.difference-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*cta*/
+.about-cta {
+    padding: var(--space-10) 0;
+    background: linear-gradient(135deg, #f8faf9 0%, white 100%);
+}
+
+.cta-box {
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+}
+
+.cta-box h2 {
+    color: white;
+    margin-bottom: var(--space-4);
+}
+
+.cta-box p {
+    margin-bottom: var(--space-6);
+    opacity: 0.95;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.cta-box .btn--primary {
+    background: white;
+    color: var(--primary);
+    border: 2px solid white;
+}
+
+.cta-box .btn--primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+    .about-hero {
+        padding: var(--space-8) 0 var(--space-6);
+    }
+
+    .mission-section,
+    .how-works-detailed,
+    .why-twogether,
+    .audience-section,
+    .values-section,
+    .about-cta {
+        padding: var(--space-8) 0;
+    }
+
+    .mission-card,
+    .cta-box {
+        padding: var(--space-6);
+    }
+
+    .differences-grid,
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+
+    .timeline-content {
+        padding: var(--space-4);
+    }
+
+    .pledge-types {
+        grid-template-columns: 1fr;
+    }
+}

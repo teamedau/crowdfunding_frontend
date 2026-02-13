@@ -42,6 +42,7 @@ function FundraiserPage() {
     };
 
     const getSupporterName = (supporterId) => {
+        if (!supporterId) return 'Unknown Supporter';
         const user = users.find(u => u.id === supporterId);
         return user ? `${user.first_name} ${user.last_name}` : `User #${supporterId}`;
     };
@@ -109,13 +110,6 @@ function FundraiserPage() {
     return (
         <div className="fundraiser-page">
             <div className="fundraiser-container">
-                <button
-                    onClick={() => navigate(-1)}
-                    className="btn btn--secondary"
-                    style={{ marginBottom: '1rem' }}
-                >
-                    ← Back
-                </button>
                 <div className="fundraiser-hero">
                     <div className="fundraiser-hero-content">
                         <h1>{fundraiser.title}</h1>
@@ -130,13 +124,13 @@ function FundraiserPage() {
                             <div className="progress-bar">
                                 <div
                                     className="progress-fill"
-                                    style={{ width: `${fundraiser.progress}%` }}
+                                    style={{ width: `${Math.min((fundraiser.pledges?.length || 0) * 20, 100)}%` }}
                                 >
-                                    <span className="progress-text">{fundraiser.progress}%</span>
+                                    <span className="progress-text">{fundraiser.pledges?.length || 0} pledges</span>
                                 </div>
                             </div>
                             <p className="progress-info">
-                                {fundraiser.pledges?.length || 0} pledges made
+                                {fundraiser.supporters?.length || 0} supporters invited
                             </p>
                         </section>
 
@@ -144,6 +138,23 @@ function FundraiserPage() {
                             <h2>About</h2>
                             <p className="fundraiser-description">{fundraiser.description}</p>
                         </section>
+
+                        {fundraiser.checklist && fundraiser.checklist.length > 0 && (
+                            <section className="fundraiser-section">
+                                <h2>📋 Checklist</h2>
+                                <div className="checklist-container">
+                                    {fundraiser.checklist.map((task, index) => (
+                                        <div key={index} className="checklist-item">
+                                            <input type="checkbox" disabled />
+                                            <span className="checklist-task">{task}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="checklist-info">
+                                    Help the community complete these tasks by making a pledge!
+                                </p>
+                            </section>
+                        )}
 
                         <section className="fundraiser-section">
                             <div className="section-header">
@@ -229,6 +240,13 @@ function FundraiserPage() {
                                 <span className="info-label">Supporters:</span>
                                 <span className="info-value">{fundraiser.supporters?.length || 0}</span>
                             </div>
+                            <button
+                                onClick={() => navigate(-1)}
+                                className="btn btn--secondary"
+                                style={{ width: '100%', marginTop: '1rem' }}
+                            >
+                                ← Back
+                            </button>
                         </div>
                     </aside>
                 </div>

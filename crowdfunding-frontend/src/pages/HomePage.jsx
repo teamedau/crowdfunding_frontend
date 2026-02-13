@@ -1,5 +1,6 @@
 import useFundraisers from "../hooks/use-fundraisers";
 import communityImg from "../assets/community-1.png";
+import kidsImg from "../assets/kids.png";
 import "./HomePage.css";
 
 
@@ -12,7 +13,7 @@ function HomePage() {
             
             <section className="hero">
                 <div className="hero-content">
-                    <h1>Tired of filling disconnected?</h1>
+                    <h1>Tired of feeling disconnected?</h1>
                     <p>
                         Bring friends and family together to support each other through meaningful actions, and discover the community you have around.
                     </p>
@@ -31,16 +32,17 @@ function HomePage() {
             </section>
 
 
-            <section className="about" id="how-it-works">
+            <section className="about" id="about">
                 <h2>What is this fundraiser about?</h2>
 
+                <div className="about-image">
+                    <img
+                        src={kidsImg}
+                        alt="we are in this together"
+                    />
+                </div>
                 <p>
-                    Twogther is a community-driven platform for inner circles—friends, family, and close communities—to support each other through meaningful actions instead of money. In a hyper-connected world where loneliness is rising, Twogther makes care visible, showing how our closest people show up, help, and grow together.
-                </p>
-
-                <p>
-                    No complex setup. No hidden fees. Just a clear way to share your story
-                    and receive support.
+                    Twogther is a community-driven platform for inner circles: friends, family, and close communities, to support each other through actions instead of money. In a hyper-connected world where loneliness is rising, Twogther makes care visible, showing how our closest people show up, help, and grow together. Now there are no excuses to not support each other, and no more barriers to receiving support when you need it most.
                 </p>
             </section>
 
@@ -70,10 +72,10 @@ function HomePage() {
 
                     <article className="testimonial">
                         <p>
-                            “Setting up my fundraiser took minutes.
+                            “Setting up my fundraiser took seconds.
                             Sharing it made all the difference.”
                         </p>
-                        <span>— James, small business owner</span>
+                        <span>— James, grandpa of 1 little princes</span>
                     </article>
 
                     <article className="testimonial">
@@ -81,7 +83,7 @@ function HomePage() {
                             “Transparent, human, and simple.
                             Exactly what fundraising should feel like.”
                         </p>
-                        <span>— Maria, nonprofit volunteer</span>
+                        <span>— Maria, mum of 3 boys</span>
                     </article>
                 </div>
             </section>
@@ -93,7 +95,6 @@ function HomePage() {
 
                     <nav className="footer-nav">
                         <a href="/about">About</a>
-                        <a href="/privacy">Privacy Policy</a>
                     </nav>
                 </div>
             </footer>

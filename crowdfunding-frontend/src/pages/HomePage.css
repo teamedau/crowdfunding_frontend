@@ -1,11 +1,9 @@
-
 main {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     color: #2c2c2c;
     line-height: 1.6;
 }
 
-/* ===== HERO ===== */
+/*hero*/
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -62,10 +60,21 @@ main {
     border-radius: 12px;
 }
 
-/* ===== ABOUT ===== */
+/*about*/
 .about {
-    padding: 4rem 6rem;
-    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 
 .about h2 {
@@ -79,7 +88,7 @@ main {
     margin-bottom: 1rem;
 }
 
-/* ===== CTA ===== */
+/*cta*/
 .cta {
     background-color: #88bb8b;
     color: white;
@@ -90,6 +99,7 @@ main {
 .cta h2 {
     font-size: 2.3rem;
     margin-bottom: 1rem;
+    color: var(--accent);
 }
 
 .cta p {
@@ -99,20 +109,21 @@ main {
 }
 
 .cta button {
-    background-color: white;
-    color: #3f5554;
+    background-color: #3f5554;
+    color: white;
     border: none;
     padding: 0.9rem 2rem;
     font-size: 1rem;
     border-radius: 6px;
     cursor: pointer;
+    display: inline-block;
 }
 
 .cta button:hover {
     opacity: 0.9;
 }
 
-/* ===== TESTIMONIALS ===== */
+/*testimonials*/
 .testimonials {
     padding: 4rem 6rem;
     background-color: #f9faf9;
@@ -148,7 +159,7 @@ main {
     color: #555;
 }
 
-/* ===== FOOTER ===== */
+/*footer*/
 .footer {
     background-color: #1f3d3a;
     color: white;
@@ -177,7 +188,7 @@ main {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/*reponsive*/
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
