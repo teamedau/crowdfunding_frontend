@@ -1,4 +1,4 @@
-<img src="logo.png" alt="Together Logo" style="width:120px; border-radius:12px;">
+<img src="src/assets/logo-dark.png" width="400">
 
 Together is a modern community-driven fundraiser platform where people support each other through meaningful actions.
 
@@ -68,21 +68,27 @@ Database:
 
 ## Print Screens
 
-###Home
-<img src="./assets/ReadMe/screen1.png" alt="Home" width="800">
+<strong>Home</strong>
 
-###About
-<img src="./assets/ReadMe/screen2.png" alt="About" width="800">
+<img src="src/assets/ReadMe/screen1.png" width="400">
 
-###Create a new fundraiser form
-<img src="./assets/ReadMe/screen3.png" alt="New Fundraiser" width="800">
+<strong>About</strong>
 
-###Login form
-<img src="./assets/ReadMe/screen4.png" alt="Login Form" width="800">
+<img src="src/assets/ReadMe/screen2.png" width="400">
 
-###Fundraisers & invitations
-<img src="./assets/ReadMe/screen5.png" alt="Fundraiser Lists" width="800">
-<img src="./assets/ReadMe/screen7.png" alt="Invitations" width="800">
+<strong>Create a new fundraiser form</strong>
 
-###Dashboard
-<img src="./assets/ReadMe/screen6.png" alt="Dashboard" width="800">
+<img src="src/assets/ReadMe/screen3.png" width="400">
+
+<strong>Login form</strong>
+
+<img src="src/assets/ReadMe/screen4.png" width="400">
+
+<strong>Fundraisers & invitations</strong>
+
+<img src="src/assets/ReadMe/screen5.png" width="400">
+<img src="src/assets/ReadMe/screen7.png" width="400">
+
+<strong>Dashboard</strong>
+
+<img src="src/assets/ReadMe/screen6.png" width="400">
