@@ -1,4 +1,4 @@
-![Logo](.\crowdfunding-frontend\src\assets\logo-dark.png)
+![Logo](crowdfunding-frontend\src\assets\logo-dark.png)
 
 Together is a modern community-driven fundraiser platform where people support each other through meaningful actions.
 
