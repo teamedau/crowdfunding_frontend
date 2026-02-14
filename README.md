@@ -1,5 +1,7 @@
-
 <img src="./crowdfunding-frontend\src\assets\logo-dark.png">
+
+🔗[Twogther Netlify Link](https://twogther.netlify.app/)
+
 Together is a modern community-driven fundraiser platform where people support each other through meaningful actions.
 
 Instead of just donating money, users contribute through intentional participation, engagement, and shared goals; building stronger communities around purpose.
@@ -69,20 +71,27 @@ Database:
 ## Print Screens
 
 ### Home
-<img src="./assets/ReadMe/screen1.png" alt="Home" width="800">
+
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen1.png" alt="Home" width="800">
 
 ### About
-<img src="./assets/ReadMe/screen2.png" alt="About" width="800">
 
-###Create a new fundraiser form
-<img src="./assets/ReadMe/screen3.png" alt="New Fundraiser" width="800">
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen2.png" alt="About" width="800">
 
-###Login form
-<img src="./assets/ReadMe/screen4.png" alt="Login Form" width="800">
+### Create a new fundraiser form
 
-###Fundraisers & invitations
-<img src="./assets/ReadMe/screen5.png" alt="Fundraiser Lists" width="800">
-<img src="./assets/ReadMe/screen7.png" alt="Invitations" width="800">
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen3.png" alt="New Fundraiser Form" width="800">
 
-###Dashboard
-<img src="./assets/ReadMe/screen6.png" alt="Dashboard" width="800">
+### Login form
+
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen4.png" alt="Login Form" width="800">
+
+### Fundraisers & invitations
+
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen5.png" alt="Fundraiser Lists" width="800">
+
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen7.png" alt="Invitations" width="800">
+
+### Dashboard
+
+<img src="./crowdfunding-frontend\src\assets\ReadMe\screen6.png" alt="Dashboard" width="800">
