@@ -1,5 +1,5 @@
-![Logo](crowdfunding-frontend\src\assets\logo-dark.png)
 
+<img src="./crowdfunding-frontend\src\assets\logo-dark.png">
 Together is a modern community-driven fundraiser platform where people support each other through meaningful actions.
 
 Instead of just donating money, users contribute through intentional participation, engagement, and shared goals; building stronger communities around purpose.
@@ -68,10 +68,10 @@ Database:
 
 ## Print Screens
 
-###Home
+### Home
 <img src="./assets/ReadMe/screen1.png" alt="Home" width="800">
 
-###About
+### About
 <img src="./assets/ReadMe/screen2.png" alt="About" width="800">
 
 ###Create a new fundraiser form
