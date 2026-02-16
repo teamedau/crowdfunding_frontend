@@ -19,7 +19,7 @@ function HomePage() {
                     </p>
 
                     <div className="hero-actions">
-                        <button onClick={() => window.location.href = '/new-fundraiser'}>Start a fundraiser</button>
+                        <button onClick={() => window.location.href = '/register'}>Create your account now</button>
                     </div>
                 </div>
 
@@ -48,13 +48,13 @@ function HomePage() {
 
 
             <section className="cta">
-                <h2>Start your fundraiser today</h2>
+                <h2>Ready to get started?</h2>
                 <p>
                     Whether you're raising funds for yourself, a loved one,
                     or a community project, getting started takes less than 5 minutes.
                 </p>
 
-                <button onClick={() => window.location.href = '/new-fundraiser'}>Bring your community together</button>
+                <button onClick={() => window.location.href = '/register'}>Bring your community together</button>
             </section>
 
 

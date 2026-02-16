@@ -74,14 +74,11 @@ a {
 @media (max-width: 480px) {
     form {
         padding: 15px;
-        /* smaller padding */
         margin: 20px auto;
-        /* less vertical space */
     }
 
     h2 {
         font-size: 1.3rem;
-        /* smaller heading */
     }
 
     input[type="text"],
@@ -91,13 +88,11 @@ a {
     textarea,
     select {
         padding: 10px;
-        /* smaller input padding */
         font-size: 0.9rem;
     }
 
     button {
         width: 100%;
-        /* buttons take full width */
         padding: 0.6rem;
         font-size: 1rem;
     }
