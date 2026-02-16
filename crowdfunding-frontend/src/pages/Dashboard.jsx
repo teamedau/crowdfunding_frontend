@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
 import getUserFundraisers from "../api/get-user-fundraisers.js";
 import getSupportedFundraisers from "../api/get-supported-fundraisers.js";
+import getUsers from "../api/get-users.js";
 import deleteFundraiser from "../api/delete-fundraiser.js";
 import updateFundraiser from "../api/update-fundraiser.js";
 import getMyInvitations from "../api/get-my-invitations.js";
@@ -53,15 +54,31 @@ function Dashboard() {
     const loadDashboardData = async () => {
         try {
             setLoading(true);
-            const [ownedFundraisersData, supportedFundraisersData, invitationsData] = await Promise.all([
+            const [ownedFundraisersData, supportedFundraisersData, invitationsData, usersData] = await Promise.all([
                 getUserFundraisers(),
                 getSupportedFundraisers(),
                 getMyInvitations(),
+                getUsers(),
             ]);
 
+            // Create a map of userId to username for quick lookup
+            const usersMap = {};
+            usersData.forEach(user => {
+                const fullName = `${user.first_name} ${user.last_name}`.trim() || user.username;
+                usersMap[user.id] = fullName;
+            });
 
-            const allFundraisers = [...ownedFundraisersData];
-            supportedFundraisersData.forEach(supported => {
+            // Enrich fundraisers with owner names
+            const enrichFundraiser = (fundraiser) => ({
+                ...fundraiser,
+                owner_name: usersMap[fundraiser.owner] || "Unknown Owner"
+            });
+
+            const enrichedOwnedFundraisers = ownedFundraisersData.map(enrichFundraiser);
+            const enrichedSupportedFundraisers = supportedFundraisersData.map(enrichFundraiser);
+
+            const allFundraisers = [...enrichedOwnedFundraisers];
+            enrichedSupportedFundraisers.forEach(supported => {
                 if (!allFundraisers.find(f => f.id === supported.id)) {
                     allFundraisers.push(supported);
                 }
@@ -402,6 +419,7 @@ Once you create an account, I'll invite you to my community!`;
                                     ) : (
                                         <>
                                             <h3>{f.title}</h3>
+                                            {f.owner_name && <p className="owner-name">By {f.owner_name}</p>}
                                             <p>{f.description}</p>
                                             <p>Goal: {f.goal_text}</p>
                                             <p>Progress: {f.progress}%</p>

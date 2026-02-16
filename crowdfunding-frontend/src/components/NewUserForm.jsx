@@ -52,7 +52,7 @@ function NewUserForm() {
                     username: credentials.username,
                 });
 
-                navigate("/new-fundraiser");
+                navigate("/dashboard");
             })
             .catch((error) => {
                 console.error("Error registering:", error);

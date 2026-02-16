@@ -30,6 +30,13 @@
     color: #81c087;
 }
 
+.fundraiser-card .owner-name {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
 .fundraiser-card p {
     margin: 0.3rem 0;
     line-height: 1.4;
@@ -100,4 +107,3 @@
         padding: 10px;
     }
 }
-
