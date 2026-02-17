@@ -194,13 +194,13 @@ function AboutPage() {
             <section className="about-cta">
                 <div className="container container--narrow">
                     <div className="cta-box">
-                        <h2 className="title-lg">Ready to Build Your Community?</h2>
+                        <h2 className="title-lg">Ready to Build Your Community?, register now</h2>
                         <p className="text-lg">
                             Start your careraiser today and discover the support that's
                             already around you.
                         </p>
                         <div className="cta-actions">
-                            <Link to="/new-fundraiser" className="btn btn--primary btn--lg">
+                            <Link to="/register" className="btn btn--primary btn--lg">
                                 🌱 Create a Careraiser
                             </Link>
                         </div>
