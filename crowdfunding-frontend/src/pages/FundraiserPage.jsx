@@ -33,7 +33,19 @@ function FundraiserPage() {
                 getFundraiser(id),
                 auth.token ? getUsers() : Promise.resolve([])
             ]);
-            setFundraiser(fundraiserData);
+            
+            // Enrich fundraiser with owner name
+            const enrichedFundraiser = {
+                ...fundraiserData,
+                owner_name: usersData.length > 0 
+                    ? (() => {
+                        const owner = usersData.find(u => u.id === fundraiserData.owner);
+                        return owner ? `${owner.first_name} ${owner.last_name}`.trim() : "Unknown Owner";
+                    })()
+                    : "Unknown Owner"
+            };
+            
+            setFundraiser(enrichedFundraiser);
             setUsers(usersData);
         } catch (err) {
             setError(err.message);
@@ -123,6 +135,7 @@ function FundraiserPage() {
             <div className="fundraiser-container">
                 <div className="fundraiser-hero">
                     <div className="fundraiser-hero-content">
+                        <p className="fundraiser-owner">By {fundraiser.owner_name}</p>
                         <h1>{fundraiser.title}</h1>
                         <p className="fundraiser-goal">{fundraiser.goal_text}</p>
                     </div>

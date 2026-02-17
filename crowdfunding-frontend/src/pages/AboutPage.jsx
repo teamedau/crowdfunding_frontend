@@ -200,8 +200,8 @@ function AboutPage() {
                             already around you.
                         </p>
                         <div className="cta-actions">
-                            <Link to="/register" className="btn btn--primary btn--lg">
-                                🌱 Create a Careraiser
+                            <Link to="/register" className="btn">
+                                🌱 Start your Careraiser, but first register
                             </Link>
                         </div>
                     </div>

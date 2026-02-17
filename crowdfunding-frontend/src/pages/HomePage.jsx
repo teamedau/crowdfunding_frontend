@@ -1,12 +1,10 @@
-import useFundraisers from "../hooks/use-fundraisers";
+import { Link } from "react-router-dom";
 import communityImg from "../assets/community-1.png";
 import kidsImg from "../assets/kids.png";
 import "./HomePage.css";
 
 
 function HomePage() {
-    const { fundraisers } = useFundraisers();
-
     return (
         <main>
 
@@ -18,9 +16,9 @@ function HomePage() {
                         Bring friends and family together to support each other through meaningful actions, and discover the community you have around.
                     </p>
 
-                    <div className="hero-actions">
-                        <button onClick={() => window.location.href = '/register'}>Create your account now</button>
-                    </div>
+                    <Link to="/register" className="btn">
+                        Register to get started
+                    </Link>
                 </div>
 
                 <div className="hero-image">
@@ -54,7 +52,9 @@ function HomePage() {
                     or a community project, getting started takes less than 5 minutes.
                 </p>
 
-                <button onClick={() => window.location.href = '/register'}>Bring your community together</button>
+                <Link to="/register" className="btn">
+                    Bring your community together
+                </Link>
             </section>
 
 
@@ -94,7 +94,7 @@ function HomePage() {
                     <p>© 2026 Twogether. All rights reserved.</p>
 
                     <nav className="footer-nav">
-                        <a href="/about">About</a>
+                        <Link to="/about">About</Link>
                     </nav>
                 </div>
             </footer>

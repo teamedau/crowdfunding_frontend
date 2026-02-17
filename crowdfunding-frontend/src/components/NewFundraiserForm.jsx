@@ -148,7 +148,7 @@ function NewFundraiserForm() {
                             placeholder="list everything you need to reach the goal"
                             value={newTask}
                             onChange={(e) => setNewTask(e.target.value)}
-                            onKeyPress={handleKeyPress}
+                            onKeyDown={handleKeyPress}
                             style={{
                                 flex: 1,
                                 padding: '0.75rem 1rem',

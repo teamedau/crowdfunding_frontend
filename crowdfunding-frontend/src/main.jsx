@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage.jsx";
 import NewFundraiserFormPage from "./pages/NewFundraiserFormPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       {path: "/register", element: <RegisterPage /> },
       {path: "/new-fundraiser", element: <NewFundraiserFormPage /> },
       {path: "/dashboard", element: <Dashboard /> },
+      {path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);
