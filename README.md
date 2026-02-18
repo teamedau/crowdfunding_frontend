@@ -64,7 +64,7 @@ Database:
 - [☑️] Implement suitable update/delete functionality, e.g. should a fundraiser owner be allowed to update its description?
 - [☑️] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [☑️] Return the relevant status codes for both successful and unsuccessful requests to the API.
-- [✖️] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page): I didn't have time to do this before submission
+- [☑️] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page)
 - [☑️] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [☑️] Implement responsive design.
 
